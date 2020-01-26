@@ -29,3 +29,8 @@
     height: 100%;
     box-sizing: border-box;
 }
+
+.policiesBox{
+    background-color: #e0e0e0;
+    max-height: 600px;
+}
