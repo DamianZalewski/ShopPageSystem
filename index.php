@@ -54,9 +54,9 @@
                         foreach($categoriesResult as $value) {
                             $margin = $i != 1 ? "mt-3" : "";
                             echo '<button id="categoryBtn'.$i.'" type="button" class="btn btn-secondary w-100 hover '. $margin .'">'.$value["name"].'</button>';
-                            echo '<div id="categoryItems'.$i.'" class="categoryItem list-group">';
+                            echo '<div id="categoryItems'.$i.'" class="categoryItem list-group group'. $value["id"] .'">';
                             foreach($value["children"] as $child) {
-                                echo    '<span href="" id="subcategory'. $i .'" data-id="'. $child['child_id'] .'" class="list-group-item list-group-item-action subcategory"><i class="fas fa-cube"></i> '. $child["child_name"] .'</span>';
+                                echo    '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'" class="list-group-item list-group-item-action subcategory"><i class="fas fa-cube"></i> '. $child["child_name"] .'</span>';
                             };
                             echo '</div>';
                             $i = $i +1;
@@ -82,22 +82,22 @@
                         <div class="row">
 <!--                         item card -->
                            <?php
-                                foreach($categoriesResult as $cat) {
-                                    foreach($cat["children"] as $child) {
-//                                        print_r($child["child_items"]);
-
-                                        foreach($child["child_items"] as $item) {
-                                            echo '
+//                                echo $subId;
+                                if(!empty( $_GET["sub"])){
+                                    $subId = $_GET["sub"];
+                                    include "php/getItem.php";
+                                    foreach($itemsResult as $item) {
+                                        echo '
                                             <div class="col-sm-4 pb-3">
                                                 <div class="card">
-                                                    <img class="card-img-top" src="images/item.jpeg" alt="Card image">
+                                                    <img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $item['item_image'] ).'" alt="Card image">
                                                     <div class="card-body">
                                                         <h4 class="card-title">' . $item["item_name"] . '</h4>
                                                         <p class="card-text text-justify">
-                                                            ' . $item["item_description"] . '
+                                                             ' . $item["item_description"] . '
                                                         </p>
                                                         <p>
-                                                            Stock: 0
+                                                            Stock: '. $item["item_stock"] .'
                                                         </p>
                                                         <p class="text-danger">
                                                             Price: ' . $item["item_cost"] . '$
@@ -106,12 +106,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        ';
+                                            ';
                                     }
                                 }
-                                }
                             ?>
-                            
                         </div>
                     </div>
                 </div>
