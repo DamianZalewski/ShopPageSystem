@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop page system</title>
+    <meta name="description" content="Shop page system">
+    <meta name="author" content="Damian Zalewski">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <span class="navbar-brand">ShopSystem</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.php">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="policies.php">Policies</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-sm">
+                <div class="mainImage text-light text-center">
+                    <div class="titleContainer">
+                        <h1>Main page title</h1>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container bg-light">
+            <div class="row pt-5 pb-5">
+                <div class="col-sm-12 text-center mb-3">
+                    <h1>Policies</h1>
+                </div>
+                <div class="overflow-auto w-75 text-justify m-auto p-4 policiesBox">
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis veniam reprehenderit perferendis praesentium, ipsam possimus vel quos quisquam unde temporibus cupiditate, ea fugiat magni aperiam eum provident laborum odio assumenda esse numquam labore minus nisi tenetur. Non iusto reprehenderit eligendi illo iste porro excepturi dolor recusandae dolores doloribus fugiat expedita nemo consequuntur perferendis voluptatibus ullam, ipsum ipsam hic explicabo, officiis ea atque officia, nostrum dicta. Architecto minima, quam debitis sint voluptatem aliquid, natus modi sunt iure eligendi neque, veniam voluptate commodi amet tenetur quis alias cupiditate adipisci iusto dolorem in molestias error quos voluptas! Deleniti non optio assumenda dolor et in repellendus tenetur ex totam animi a veritatis consequuntur repellat eveniet quod dicta vitae nisi odio inventore cumque accusantium, molestias exercitationem, sit? Laudantium, distinctio accusamus porro asperiores aliquam facilis quas non eius, iusto soluta nam odio perspiciatis, expedita sint! Ut ipsa pariatur error illum provident dolore non rem quisquam! Nemo ipsum ullam repudiandae, commodi, ad reprehenderit! Nemo provident ducimus fugiat a eos atque cumque, minus non, culpa in quod quam pariatur sit excepturi quisquam. Delectus sit unde nisi, placeat cumque fugit labore pariatur dolorem ab corrupti obcaecati ipsa quas doloribus quibusdam esse cum dolorum, itaque ullam, perferendis rerum, rem non reprehenderit facere. Temporibus in suscipit, maiores laborum a nemo est? Aperiam porro laudantium laboriosam delectus incidunt officia mollitia eos autem nulla. Eaque eligendi fugit beatae debitis labore quis aperiam, facilis similique. Quod harum totam quam assumenda quo nesciunt ipsum, maxime repudiandae mollitia cumque pariatur sapiente similique accusantium perferendis reprehenderit nostrum vero ullam? Adipisci totam eum minus sequi dicta commodi iste dolorum ex fugit nisi. Quis nostrum repudiandae eaque eius debitis, facilis laborum provident. Numquam eligendi similique repellendus perspiciatis deserunt commodi, quae est reiciendis voluptates officiis voluptatum. Delectus recusandae numquam molestias, repellendus sunt. Placeat quo autem, tenetur commodi enim ab ullam laudantium, eum saepe nisi nemo cupiditate velit facilis, beatae cum nobis accusantium aliquam quasi. Mollitia labore laboriosam corporis, pariatur distinctio repellendus molestiae alias, illum debitis suscipit tempore, asperiores hic beatae voluptatum vel voluptatibus, assumenda iure eos ullam inventore earum. Dolore, officiis architecto, perspiciatis dignissimos omnis unde at. Accusantium necessitatibus repudiandae in temporibus cum quaerat quidem enim provident, maxime et sunt sint? Iusto, consectetur incidunt placeat iste ut a. Sint libero tenetur similique in aut eos deleniti commodi, tempora ea quos voluptates ducimus exercitationem sequi, quis quam asperiores, ad cumque! Pariatur dolores atque deserunt expedita reprehenderit est vel consequatur blanditiis in veritatis illum maiores quo voluptate perferendis, laudantium aliquid aliquam dicta, iusto ea, praesentium voluptatem amet iste ducimus! Consequuntur nulla quod doloribus iste blanditiis sunt numquam quisquam adipisci, similique rem animi illo itaque cumque voluptate, esse explicabo, quia veritatis fugit soluta nemo possimus ea minima totam ex! Porro expedita, quaerat tempora recusandae quia, praesentium sed ducimus quas tenetur est neque quo odio incidunt repudiandae iure consequuntur doloremque ipsum repellendus ab! Quae quia voluptatem, quaerat inventore, nisi cum nulla nesciunt. Dolorum, assumenda excepturi quasi ipsa officia non, hic dicta voluptatum ullam, aliquid quae repellendus similique eos, maxime cupiditate libero. Sit facilis et, quidem similique magnam. Earum illo, accusamus eos quisquam, ratione adipisci. Maxime ex eveniet voluptate quisquam temporibus, cum officia accusantium, aliquid ipsam dolores suscipit sint rerum accusamus in necessitatibus aperiam laboriosam! Doloribus ducimus, quidem aliquid beatae blanditiis totam itaque esse, maxime dolorem ratione quam nobis, velit iusto dolorum unde autem vel saepe, sapiente quis. Voluptates dolore quod optio, dignissimos delectus itaque veritatis nobis quos atque assumenda pariatur esse quis at. Tempore similique consequatur numquam quisquam unde, error voluptatem expedita aliquam dignissimos! Natus sapiente hic iusto mollitia eius, ea molestias debitis dolor facilis voluptatibus! Deserunt vero atque aspernatur sint tempore ab eligendi esse, eveniet illum quae consectetur pariatur numquam dolore iste, quasi adipisci suscipit quidem vitae quaerat magnam aut ducimus sequi. A molestias voluptatibus ex optio unde atque quod blanditiis est possimus modi nihil eaque voluptas, eligendi fugiat quos? Hic debitis sint dignissimos quisquam, voluptatibus mollitia fugit doloribus quos dicta nihil voluptates dolorem illum reprehenderit recusandae expedita necessitatibus blanditiis deleniti dolorum. Veritatis nobis cupiditate enim voluptatibus dolorum quaerat iure magnam labore vero quasi, maiores alias, exercitationem fugit eius est quis nemo similique veniam quo dignissimos distinctio in voluptatum harum. Ipsum facere, veritatis illo rerum placeat repellendus odit culpa. Debitis nostrum aperiam, earum dolor ipsa, ut saepe sequi non possimus quo cupiditate, nesciunt porro recusandae repellat fuga unde ducimus cumque natus neque fugiat deserunt doloribus! Magni iure suscipit natus, alias, assumenda et officia quia, iste illo nulla quod veritatis vero maxime consectetur, similique praesentium facere cupiditate! Aspernatur quisquam eveniet facere incidunt nobis cupiditate voluptate eligendi culpa dicta libero consequuntur numquam saepe voluptatem corrupti quidem in quod iusto dolorem, odio molestiae quae. Ex rem deserunt ipsa sequi ab commodi autem eligendi eveniet, sed quae molestiae consequatur quos molestias ducimus odio harum exercitationem est mollitia, obcaecati distinctio dolore reprehenderit at eius. Consequuntur reiciendis nisi ea deleniti voluptatem, quo debitis aliquam minima excepturi officiis obcaecati facere asperiores! Laboriosam voluptatibus cupiditate dicta quisquam minima fugiat, molestias, repellat sit ex quia quae vel dolorum sequi id fuga, blanditiis dolores alias! Quaerat qui repudiandae expedita, illum quae neque et accusantium cumque itaque vitae ex obcaecati animi voluptate adipisci aliquid, natus, dignissimos praesentium beatae numquam fuga ducimus voluptatem maxime magni autem fugiat? Repellendus voluptas est, mollitia laudantium reiciendis quibusdam fugit architecto! Soluta velit aperiam impedit nemo recusandae esse minus quas, est natus, iusto rem accusamus nam, inventore illo molestias ad reprehenderit quidem minima autem provident nihil culpa alias, id voluptatem. In, distinctio minima magnam expedita rerum repellat aspernatur a ea nesciunt, dignissimos neque provident modi illum ad, aliquid sunt? Minima quaerat rerum repellat similique nulla, impedit rem natus, sunt excepturi, aut non ipsum iusto deleniti magni, autem voluptates. Accusamus ab eum molestiae commodi, dolorem, numquam, consequatur placeat consectetur rem enim modi neque cumque laborum quidem sint. Aliquid, veniam saepe. Sint maiores quia quibusdam nulla molestiae perferendis tenetur necessitatibus, expedita error minus recusandae impedit commodi eligendi laborum voluptate. Sequi repellat facere nisi nobis quia, veniam illo nemo iusto iure distinctio sint cupiditate. Tenetur iste quibusdam laborum, minima cum officia amet sit.
+                </div>
+            </div>
+        </div>
+        <div class="container  bg-secondary text-light">
+            <div class="row">
+                <p class="text-center w-100 pt-3">
+                    &copy; Copyright 2020 Damian Zalewski - All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="background"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

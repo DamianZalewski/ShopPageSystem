@@ -1,7 +1,17 @@
 $(document).ready(function(){
     let cart = JSON.parse(localStorage.getItem("cart"));
     let summs = 0;
-    console.log(cart);
+
+    if(cart.length == 0){
+        $("#itemTable").hide();
+        $("#noItemsHeader").show();
+        $("#nextCartButton").addClass("disabled");
+    } else {
+        $("#itemTable").show();
+        $("#noItemsHeader").hide();
+        $("#nextCartButton").removeClass("disabled");        
+    }
+    
     cart.forEach(function(item, index){
         $("#tbodyList").append(
             '<tr><th scope="row">'+(index+1)+'</th><td>'+item.name+
@@ -19,7 +29,6 @@ $(document).ready(function(){
             cart = jQuery.grep(cart, function(value) {
                 return value.id != removeItem;
             });
-            console.log(cart);
             localStorage.setItem("cart", JSON.stringify(cart));
             location.reload();
         });

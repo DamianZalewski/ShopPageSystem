@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-            <span class="navbar-brand" href="index.html">ShopSystem</span>
+            <span class="navbar-brand">ShopSystem</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,10 +26,10 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Cart</a>
+                        <a class="nav-link" href="cart.php">Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="policies.html">Policies</a>
+                        <a class="nav-link" href="policies.php">Policies</a>
                     </li>
                 </ul>
             </div>
@@ -51,13 +51,19 @@
                     <?php 
                         include "php/getCategories.php";
                         $i = 1;
+                        $breadCrumb = null;
                         foreach($categoriesResult as $value) {
                             $margin = $i != 1 ? "mt-3" : "";
                             echo '<button id="categoryBtn'.$i.'" type="button" class="btn btn-secondary w-100 hover '. $margin .'">'.$value["name"].'</button>';
                             echo '<div id="categoryItems'.$i.'" class="categoryItem list-group group'. $value["id"] .'">';
                             foreach($value["children"] as $child) {
-                                echo    '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'" class="list-group-item list-group-item-action subcategory pointer"><i class="fas fa-cube"></i> '. $child["child_name"] .'</span>';
+                                if(!empty( $_GET["sub"]) && $_GET["sub"] == $child['child_id']) $breadCrumb = $value["name"] . " - " . $child["child_name"];
+//                                
+                                echo    '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'"class="list-group-item list-group-item-action subcategory pointer"><i class="fas fa-cube"></i> '.$child["child_name"].'</span>';
                             };
+//                            foreach($value["children"] as $child) {
+//                                echo    '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'" class="list-group-item list-group-item-action subcategory pointer"><i class="fas fa-cube"></i> '. $child["child_name"] .'</span>';
+//                            };
                             echo '</div>';
                             $i = $i +1;
                         }
@@ -69,11 +75,16 @@
                        <div class="container">
                             <div class="row">
                                <div class="col-sm-10">
-                                    Category 1 
+                                  <h3 class="mt-2">
+                                   <?php
+                                        if(empty($breadCrumb)) echo 'Main page';
+                                        else echo $breadCrumb;
+                                   ?>
+                                   </h3>
                                </div>
                                <div class="col-sm-2">
-                                    <a href="cart.html" class="btn btn-secondary w-100">Cart 
-                                    <span id="cartButton"><i class="fas fa-shopping-cart"></i></span></a>
+                                    <a href="cart.php" class="btn btn-secondary w-100">Cart 
+                                    <span id="cartButton"></span></a>
                                 </div>
                             </div>
                             <hr>
@@ -115,6 +126,21 @@
                                             ';
                                         $i = $i + 1;
                                     }
+                                } else {
+                                    echo '
+                                        <h2 class="text-center w-100">
+                                            Welcome to the ShopSystem!
+                                        </h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, ipsam nobis repellendus? Vel, quos, quis quidem illum voluptatum, quia sed odit reprehenderit ducimus aperiam amet provident. Optio commodi dicta, officia alias voluptatibus cumque, omnis. Voluptatem earum distinctio quibusdam, iure dicta!
+                                        </p>
+                                        <div class="text-center">
+                                            <img class="w-50 pb-4" src="images/main.jpeg" alt="main image">
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, ipsam nobis repellendus? Vel, quos, quis quidem illum voluptatum, quia sed odit reprehenderit ducimus aperiam amet provident. Optio commodi dicta, officia alias voluptatibus cumque, omnis. Voluptatem earum distinctio quibusdam, iure dicta!
+                                        </p>
+                                    ';
                                 }
                             ?>
                         </div>
