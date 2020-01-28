@@ -40,3 +40,7 @@
     height: 180px;
     object-fit: cover;
 }
+
+.pointer:hover{
+    cursor: pointer;
+}

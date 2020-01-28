@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cart.html">Cart</a>
@@ -58,50 +58,16 @@
                       <th scope="col">Name</th>
                       <th scope="col">Quantity</th>
                       <th scope="col">Cost</th>
+                      <th scope="col"></th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
+                  <tbody id="tbodyList">
+<!--                    cart items -->
                   </tbody>
                 </table>
                 </div>   
-                <div class="w-75 m-auto pb-4 text-center text-danger">
-                    Summary : 10$
+                <div  class="w-75 m-auto pb-4 text-center text-danger">
+                    <span id="summaryCost">Summary : 10$</span>
                     <br />
                     <a href="form.html" class="btn btn-secondary mt-2 pl-5 pr-5">Next</a>
                 </div>       
@@ -117,7 +83,7 @@
     </div>
     <div class="background"></div>
 
-    <script src="script.js"></script>
+    <script src="cart.js"></script>
 </body>
 
 </html>

@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cart.html">Cart</a>
@@ -56,7 +56,7 @@
                             echo '<button id="categoryBtn'.$i.'" type="button" class="btn btn-secondary w-100 hover '. $margin .'">'.$value["name"].'</button>';
                             echo '<div id="categoryItems'.$i.'" class="categoryItem list-group group'. $value["id"] .'">';
                             foreach($value["children"] as $child) {
-                                echo    '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'" class="list-group-item list-group-item-action subcategory"><i class="fas fa-cube"></i> '. $child["child_name"] .'</span>';
+                                echo    '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'" class="list-group-item list-group-item-action subcategory pointer"><i class="fas fa-cube"></i> '. $child["child_name"] .'</span>';
                             };
                             echo '</div>';
                             $i = $i +1;
@@ -72,7 +72,8 @@
                                     Category 1 
                                </div>
                                <div class="col-sm-2">
-                                    <a href="cart.html" class="btn btn-secondary w-100">Cart <i class="fas fa-shopping-cart"></i></a>
+                                    <a href="cart.html" class="btn btn-secondary w-100">Cart 
+                                    <span id="cartButton"><i class="fas fa-shopping-cart"></i></span></a>
                                 </div>
                             </div>
                             <hr>

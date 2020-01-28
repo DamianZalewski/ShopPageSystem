@@ -5,15 +5,13 @@ $(document).ready(function(){
         sURLVariables = sPageURL.split('&'),
         sParameterName,
         i;
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
 
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
         }
-    }
-     
     };
 
     // hide all submenu and show only the first one or actual one
@@ -86,7 +84,33 @@ $(document).ready(function(){
                     localStorage.setItem("cart", JSON.stringify(cart));
                 }
             }
-            console.log(localStorage.getItem("cart"));
+            fillCartBadge();
         });
     }
+    
+    
+    // change cart icon - badge
+    function fillCartBadge(){
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        let summs = 0;
+        cart.forEach(function(item){
+            summs += item.quantity;
+        });
+        if(cart.length > 0)
+            $("#cartButton").html('<span class="badge badge-pill badge-light">'+summs+'</span>');
+        else 
+            $("#cartButton").html('<i class="fas fa-shopping-cart"></i>');
+    }
+    
+    // initial fill for cart badge
+    fillCartBadge();
+
 });
+
+
+
+
+
+
+
+
