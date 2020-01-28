@@ -86,11 +86,12 @@
                                 if(!empty( $_GET["sub"])){
                                     $subId = $_GET["sub"];
                                     include "php/getItem.php";
+                                    $i = 1;
                                     foreach($itemsResult as $item) {
                                         echo '
                                             <div class="col-sm-4 pb-3">
                                                 <div class="card">
-                                                    <img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $item['item_image'] ).'" alt="Card image">
+                                                    <img class="card-img-top itemImage" src="data:image/jpeg;base64,'.base64_encode( $item['item_image'] ).'" alt="Card image">
                                                     <div class="card-body">
                                                         <h4 class="card-title">' . $item["item_name"] . '</h4>
                                                         <p class="card-text text-justify">
@@ -102,11 +103,16 @@
                                                         <p class="text-danger">
                                                             Price: ' . $item["item_cost"] . '$
                                                         </p>
-                                                        <span href="#" class="btn btn-secondary w-100">Add to cart <i class="fas fa-shopping-cart"></i></span>
+                                                        <span id="itemAdd'.$i.'"
+                                                        data-id="'.$item["item_id"].'"
+                                                        data-name="'.$item["item_name"].'"
+                                                        data-cost="'.$item["item_cost"].'"
+                                                        class="btn btn-secondary w-100 itemAdd">Add to cart <i class="fas fa-shopping-cart"></i></span>
                                                     </div>
                                                 </div>
                                             </div>
                                             ';
+                                        $i = $i + 1;
                                     }
                                 }
                             ?>
