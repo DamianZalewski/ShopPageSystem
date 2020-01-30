@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -7,7 +6,7 @@
     <title>Shop page system</title>
     <meta name="description" content="Shop page system">
     <meta name="author" content="Damian Zalewski">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -78,7 +77,7 @@
                    </div>
                 </div>   
                 <div class="w-75 m-auto pb-4 text-center text-danger">
-                    <a href="index.php" class="btn btn-secondary mt-2 pl-5 pr-5">Buy</a>
+                    <span id="buySummaryButton" class="btn btn-secondary mt-2 pl-5 pr-5 pointer">Buy</span>
                 </div>       
             </div>
         </div>

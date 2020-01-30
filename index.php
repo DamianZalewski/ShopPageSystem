@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -58,12 +57,8 @@
                             echo '<div id="categoryItems'.$i.'" class="categoryItem list-group group'. $value["id"] .'">';
                             foreach($value["children"] as $child) {
                                 if(!empty( $_GET["sub"]) && $_GET["sub"] == $child['child_id']) $breadCrumb = $value["name"] . " - " . $child["child_name"];
-//                                
-                                echo    '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'"class="list-group-item list-group-item-action subcategory pointer"><i class="fas fa-cube"></i> '.$child["child_name"].'</span>';
+                                echo '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'"class="list-group-item list-group-item-action subcategory pointer"><i class="fas fa-cube"></i>                    '.$child["child_name"].'</span>';
                             };
-//                            foreach($value["children"] as $child) {
-//                                echo    '<span id="subcategory'. $i .'" data-id="'. $child['child_id'] .'" class="list-group-item list-group-item-action subcategory pointer"><i class="fas fa-cube"></i> '. $child["child_name"] .'</span>';
-//                            };
                             echo '</div>';
                             $i = $i +1;
                         }

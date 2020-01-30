@@ -93,10 +93,11 @@ $(document).ready(function(){
     function fillCartBadge(){
         let cart = JSON.parse(localStorage.getItem("cart"));
         let summs = 0;
+        if(cart != null)
         cart.forEach(function(item){
             summs += item.quantity;
         });
-        if(cart.length > 0)
+        if(cart != null && cart.length > 0)
             $("#cartButton").html('<span class="badge badge-pill badge-light">'+summs+'</span>');
         else 
             $("#cartButton").html('<i class="fas fa-shopping-cart"></i>');

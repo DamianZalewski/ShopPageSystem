@@ -2,7 +2,7 @@ $(document).ready(function(){
     let cart = JSON.parse(localStorage.getItem("cart"));
     let summs = 0;
 
-    if(cart.length == 0){
+    if(cart == null || cart.length == 0){
         $("#itemTable").hide();
         $("#noItemsHeader").show();
         $("#nextCartButton").addClass("disabled");
@@ -12,6 +12,7 @@ $(document).ready(function(){
         $("#nextCartButton").removeClass("disabled");        
     }
     
+    if(cart != null)
     cart.forEach(function(item, index){
         $("#tbodyList").append(
             '<tr><th scope="row">'+(index+1)+'</th><td>'+item.name+
@@ -29,7 +30,8 @@ $(document).ready(function(){
             cart = jQuery.grep(cart, function(value) {
                 return value.id != removeItem;
             });
-            localStorage.setItem("cart", JSON.stringify(cart));
+            if(cart.length == 0) localStorage.removeItem("cart");
+            else localStorage.setItem("cart", JSON.stringify(cart));
             location.reload();
         });
     }
