@@ -48,3 +48,52 @@
 .inputError{
     border-color:#860202;
 }
+
+.itemTableContainer{
+    overflow-x: auto;
+}
+
+.mobileMenu{
+    width:100%;
+    transition: height .2s;
+}
+
+.mobileMenu ul{
+    padding-top:0.5rem;
+    padding-right:0.5rem;
+    text-align: right;
+    list-style: none;
+}
+
+.mobileMenu li a{
+    color:#ffffff;
+}
+
+.mobileClose{
+    height: 0px;
+}
+
+.mobileOpen{
+    height:90px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .titleContainer h1{
+        font-size: 28px;
+    }
+    
+    .titleContainer h4{
+        font-size: 18px;
+    }
+    
+    .footer{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .mobileMenu{
+        display: none;
+    }
+}

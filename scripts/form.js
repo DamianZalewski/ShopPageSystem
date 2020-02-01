@@ -26,16 +26,18 @@ $(document).ready(function(){
             if(nameVal == "" || surnameVal == "" || emailVal == ""){
                 event.preventDefault();
                 event.stopPropagation();
+            } else {
+                var d = new Date();
+                let formObj = {
+                    name : nameVal,
+                    surname : surnameVal,
+                    date : d.toDateString(),
+                    email : emailVal,
+                    description: descriptionVal  
+                };
+                localStorage.setItem("form", JSON.stringify(formObj));
             }
             
-//            var d = new Date();
-//            let formObj = {
-//                    name : nameVal,
-//                    surname : surnameVal,
-//                    date : d.toDateString(),
-//                    email : emailVal,
-//                    description: descriptionVal  
-//                };
-//            localStorage.setItem("form", JSON.stringify(formObj));
+           
         });
 });

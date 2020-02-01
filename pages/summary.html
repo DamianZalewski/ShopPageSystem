@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,26 +9,39 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
             <span class="navbar-brand">ShopSystem</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="mobileToggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.php">Cart</a>
+                        <a class="nav-link" href="cart.html">Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="policies.php">Policies</a>
+                        <a class="nav-link" href="policies.html">Policies</a>
+                    </li>
+                </ul>
+            </div>
+             <div id="mobileMenu" class="mobileMenu mobileClose">
+                <ul>
+                    <li>
+                        <a href="../index.php">Home <i class="fas fa-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <li>
+                        <a href="policies.html">Policies <i class="fas fa-book"></i></a>
                     </li>
                 </ul>
             </div>
@@ -81,7 +94,7 @@
                 </div>       
             </div>
         </div>
-        <div class="container  bg-secondary text-light">
+        <div class="footer container  bg-secondary text-light">
             <div class="row">
                 <p class="text-center w-100 pt-3">
                     &copy; Copyright 2020 Damian Zalewski - All Rights Reserved
@@ -91,7 +104,8 @@
     </div>
     <div class="background"></div>
 
-    <script src="summary.js"></script>
+    <script src="../scripts/summary.js"></script>
+    <script src="../scripts/mobile.js"></script>
 </body>
 
 </html>

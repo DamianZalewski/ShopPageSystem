@@ -16,7 +16,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
             <span class="navbar-brand">ShopSystem</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="mobileToggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -25,10 +25,23 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.php">Cart</a>
+                        <a class="nav-link" href="pages/cart.html">Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="policies.php">Policies</a>
+                        <a class="nav-link" href="pages/policies.html">Policies</a>
+                    </li>
+                </ul>
+            </div>
+             <div id="mobileMenu" class="mobileMenu mobileClose">
+                <ul>
+                    <li>
+                        <a href="index.php">Home <i class="fas fa-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="pages/cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <li>
+                        <a href="pages/policies.html">Policies <i class="fas fa-book"></i></a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +58,7 @@
         </div>
         <div class="container bg-light">
             <div class="row">
-               <div class="col-sm-3 pt-4">
+               <div class="col-lg-3 col-md-4 pt-4">
                     <!--     category section -->
                     <?php 
                         include "php/getCategories.php";
@@ -64,21 +77,21 @@
                         }
                     ?>
                 </div>
-                <div class="col-sm-9 pt-3">
+                <div class="col-lg-9 col-md-8 pt-3">
                     <!--      item section -->
                     <h1 class="pl-3">
                        <div class="container">
                             <div class="row">
-                               <div class="col-sm-10">
-                                  <h3 class="mt-2">
+                               <div class="col-lg-10 col-md-12 text-sm-center text-lg-left">
+                                  <h3>
                                    <?php
                                         if(empty($breadCrumb)) echo 'Main page';
                                         else echo $breadCrumb;
                                    ?>
                                    </h3>
                                </div>
-                               <div class="col-sm-2">
-                                    <a href="cart.php" class="btn btn-secondary w-100">Cart 
+                               <div class="col-lg-2 col-sm-6 mx-auto">
+                                    <a href="pages/cart.html" class="btn btn-secondary w-100">Cart 
                                     <span id="cartButton"></span></a>
                                 </div>
                             </div>
@@ -97,7 +110,7 @@
                                     foreach($itemsResult as $item) {
                                         $buttonActive = $item["item_stock"] == 0 ? "disabled" : "";
                                         echo '
-                                            <div class="col-sm-4 pb-3">
+                                            <div class="col-lg-4 col-sm-12 pb-3">
                                                 <div class="card">
                                                     <img class="card-img-top itemImage" src="data:image/jpeg;base64,'.base64_encode( $item['item_image'] ).'" alt="Card image">
                                                     <div class="card-body">
@@ -145,7 +158,7 @@
                 </div>
             </div>
         </div>
-        <div class="container  bg-secondary text-light">
+        <div class="footer container bg-secondary text-light">
             <div class="row">
                 <p class="text-center w-100 pt-3">
                     &copy; Copyright 2020 Damian Zalewski - All Rights Reserved
@@ -156,6 +169,7 @@
     <div class="background"></div>
 
     <script src="script.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 
 </html>

@@ -26,11 +26,11 @@ $(document).ready(function(){
     $("#buySummaryButton").on("click", function(){
         cart = JSON.stringify(cart);
         $.ajax({
-            url: 'php/order.php?name='+name+'&surname='+surname+'&email='+email+'&date='+date+'&description='+description+'&cart='+cart ,
+            url: '../php/order.php?name='+name+'&surname='+surname+'&email='+email+'&date='+date+'&description='+description+'&cart='+cart ,
             success: function (response) {
                 localStorage.removeItem("cart");
                 localStorage.removeItem("form");
-                location.href = "index.php";
+                location.href = "../index.php";
             }
         });
     });
