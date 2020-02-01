@@ -95,6 +95,7 @@
                                     include "php/getItem.php";
                                     $i = 1;
                                     foreach($itemsResult as $item) {
+                                        $buttonActive = $item["item_stock"] == 0 ? "disabled" : "";
                                         echo '
                                             <div class="col-sm-4 pb-3">
                                                 <div class="card">
@@ -114,7 +115,8 @@
                                                         data-id="'.$item["item_id"].'"
                                                         data-name="'.$item["item_name"].'"
                                                         data-cost="'.$item["item_cost"].'"
-                                                        class="btn btn-secondary w-100 itemAdd">Add to cart <i class="fas fa-shopping-cart"></i></span>
+                                                        data-stock="'.$item["item_stock"].'"
+                                                        class="btn btn-secondary w-100 itemAdd '. $buttonActive .'">Add to cart <i class="fas fa-shopping-cart"></i></span>
                                                     </div>
                                                 </div>
                                             </div>

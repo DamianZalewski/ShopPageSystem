@@ -44,47 +44,58 @@ $(document).ready(function(){
     let itemAddCount = $(".itemAdd").length;
     for(let i = 1; i<=itemAddCount; i++){
         $("#itemAdd"+i).click(function(){
-            
-            let itemId = $(this).attr("data-id");
-            let itemName = $(this).attr("data-name");
-            let itemCost = $(this).attr("data-cost");
-            
-            let cart = JSON.parse(localStorage.getItem("cart"));
-            
-            if(cart === null){
-                let cart = [];
-                let itemObj = {
-                    id : itemId,
-                    name : itemName,
-                    cost : itemCost,
-                    quantity : 1
-                }
-                cart.push(itemObj);
-                localStorage.setItem("cart", JSON.stringify(cart));
-            } else {
-                let flag = false;
+            let itemStock = $(this).attr("data-stock");
+            if(itemStock > 0){
+                let itemId = $(this).attr("data-id");
+                let itemName = $(this).attr("data-name");
+                let itemCost = $(this).attr("data-cost");
                 
-                cart.forEach(function(item){
-                    if(itemId == item.id) {
-                        item.quantity ++;
-                        flag = true;
-                        localStorage.setItem("cart", JSON.stringify(cart));
-                    }
+                //get actual item stock from localstorage
+                let cart = JSON.parse(localStorage.getItem("cart"));
+                
+                let cartItemQuantity = 0;
+                if(cart != null) cart.forEach(function(element) {
+                    if(itemId == element.id) cartItemQuantity = element.quantity;
                 });
                 
-                if(!flag)
-                {
-                    let itemObj = {
-                        id : itemId,
-                        name : itemName,
-                        cost : itemCost,
-                        quantity : 1
+                if(cartItemQuantity < itemStock){
+                    //add item to a cart
+                    if(cart === null){
+                        let cart = [];
+                        let itemObj = {
+                            id : itemId,
+                            name : itemName,
+                            cost : itemCost,
+                            quantity : 1
+                        }
+                        cart.push(itemObj);
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                    } else {
+                        let flag = false;
+
+                        cart.forEach(function(item){
+                            if(itemId == item.id) {
+                                item.quantity ++;
+                                flag = true;
+                                localStorage.setItem("cart", JSON.stringify(cart));
+                            }
+                        });
+
+                        if(!flag)
+                        {
+                            let itemObj = {
+                                id : itemId,
+                                name : itemName,
+                                cost : itemCost,
+                                quantity : 1
+                            }
+                            cart.push(itemObj);
+                            localStorage.setItem("cart", JSON.stringify(cart));
+                        }
                     }
-                    cart.push(itemObj);
-                    localStorage.setItem("cart", JSON.stringify(cart));
+                    fillCartBadge();
                 }
             }
-            fillCartBadge();
         });
     }
     

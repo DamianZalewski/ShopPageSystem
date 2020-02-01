@@ -23,7 +23,12 @@
 //                    print_r($value->id. " q: ". $value->quantity); // new id
                     $orderListSql = "INSERT INTO order_list(parent_id, item_id, quantity) VALUES ('".$newId."','".$value->id."','".$value->quantity."')";
                     if ($conn->query($orderListSql) === TRUE) {
-                        echo "New record created successfully";
+                        $itemStockSql = "UPDATE item SET stock=stock-". $value->quantity." WHERE id=". $value->id;
+                            if ($conn->query($itemStockSql) === TRUE) {
+                            echo "New record created successfully";
+                        } else {
+                            echo "Error: " . $itemStockSql . "<br>" . $conn->error;
+                        }
                     } else {
                         echo "Error: " . $orderListSql . "<br>" . $conn->error;
                     }
