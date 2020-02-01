@@ -44,3 +44,7 @@
 .pointer:hover{
     cursor: pointer;
 }
+
+.inputError{
+    border-color:#860202;
+}
